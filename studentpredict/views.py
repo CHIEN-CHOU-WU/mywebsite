@@ -8,7 +8,10 @@ def studentpredict_view(request, *args, **kwargs):
 	#return HttpResponse("<h1>Django 版本!<h1>")
 	obj = studentperformance.objects.all()
 	context = {
-		'object': obj
+		'object': obj,
+		'listing': studentperformance.objects.explain(),
+		'lists' : [range(0, 32)]
 	}
+	
 
 	return render(request, "studentpredict/studentpredict.html", context)

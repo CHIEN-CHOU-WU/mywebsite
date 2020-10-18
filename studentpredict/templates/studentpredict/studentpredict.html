@@ -1,17 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<div id="main">
-		<ul class="list">
-		{% for student in object %}
-        	<li>{{ student.school }} | {{ student.sex }}</li>
-    	{% endfor %}
-		</ul>
-	</div>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>school</th>
+                <th>sex</th>
+                <th>age</th>
+                <th>address</th>
+                <th>famsize</th>
+                <th>Pstatus</th>
+                <th>Medu</th>
+                <th>Fedu</th>
+                <th>Mjob</th>
+                <th>Fjob</th>
+                <th>reason</th>
+                <th>father</th>
+                <th>traveltime</th>
+                <th>studytime</th>
+                <th>failures</th>
+                <th>schoolsup</th>
+                <th>famsup</th>
+                <th>paid</th>
+                <th>activities</th>
+                <th>nursery</th>
+                <th>higher</th>
+                <th>internet</th>
+                <th>romantic</th>
+                <th>famrel</th>
+                <th>freetime</th>
+                <th>goout</th>
+                <th>Dalc</th>
+                <th>Walc</th>
+                <th>health</th>
+                <th>absences</th>
+                <th>G1</th>
+                <th>G2</th>
+                <th>G3</th>
+            </tr>
+        </thead>
+        <tbody>
+
+			{% for stutent in lists %}
+				{% for student in object %}
+				<tr>
+				<td>{{student.id}}</td>
+				<td>{{student.school}}</td>
+				<td>{{student.sex}}</td>
+				<td>{{student.age}}</td>
+				<td>{{student.address}}</td>
+				<td>{{student.famsize}}</td>
+				<td>{{student.Pstatus}}</td>
+				<td>{{student.Medu}}</td>
+				<td>{{student.Fedu}}</td>
+				<td>{{student.Mjob}}</td>
+				<td>{{student.Fjob}}</td>
+				<td>{{student.reason}}</td>
+				<td>{{student.father}}</td>
+				<td>{{student.traveltime}}</td>
+				<td>{{student.studytime}}</td>
+				<td>{{student.failures}}</td>
+				<td>{{student.schoolsup}}</td>
+				<td>{{student.famsup}}</td>
+				<td>{{student.paid}}</td>
+				<td>{{student.activities}}</td>
+				<td>{{student.nursery}}</td>
+				<td>{{student.higher}}</td>
+				<td>{{student.internet}}</td>
+				<td>{{student.romantic}}</td>
+				<td>{{student.famrel}}</td>
+				<td>{{student.freetime}}</td>
+				<td>{{student.goout}}</td>
+				<td>{{student.Dalc}}</td>
+				<td>{{student.Walc}}</td>
+				<td>{{student.health}}</td>
+				<td>{{student.absences}}</td>
+				<td>{{student.G1}}</td>
+				<td>{{student.G2}}</td>
+				<td>{{student.G3}}</td>
+				</tr>
+				{% endfor %}
+			
+			
+			{% endfor %}
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>school</th>
+                <th>sex</th>
+                <th>age</th>
+                <th>address</th>
+                <th>famsize</th>
+                <th>Pstatus</th>
+                <th>Medu</th>
+                <th>Fedu</th>
+                <th>Mjob</th>
+                <th>Fjob</th>
+                <th>reason</th>
+                <th>father</th>
+                <th>traveltime</th>
+                <th>studytime</th>
+                <th>failures</th>
+                <th>schoolsup</th>
+                <th>famsup</th>
+                <th>paid</th>
+                <th>activities</th>
+                <th>nursery</th>
+                <th>higher</th>
+                <th>internet</th>
+                <th>romantic</th>
+                <th>famrel</th>
+                <th>freetime</th>
+                <th>goout</th>
+                <th>Dalc</th>
+                <th>Walc</th>
+                <th>health</th>
+                <th>absences</th>
+                <th>G1</th>
+                <th>G2</th>
+                <th>G3</th>
+            </tr>
+        </tfoot>
+    </table>
+
+{% endblock %}
