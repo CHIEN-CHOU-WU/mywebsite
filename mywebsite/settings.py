@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # own
     'homepage',
     'studentpredict',
+    'post',
 
 ]
 

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+      My Post
+{% endblock %}
+
+{% block content %}
+
+<h1>Post</h1>
+<br>
+<ul>
+{% for post in object_list %}
+	<li><a href="{% url 'post-details' post.pk %}">{{post.title}}</a><br>
+	by - {{post.author}}<br>
+	{{post.body}}</li>
+	<br>
+{% endfor %}
+</ul>
+<hr>
+<br/>
+<a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
+
+{% endblock %}
