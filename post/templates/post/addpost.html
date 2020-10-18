@@ -8,10 +8,12 @@
 
 <h1>Add Post</h1>
 <br><br>
-<form method="POST">
-	{% csrf_token %}
-	{{ form.as_p }}
-	<button type="submit" class="btn btn-success">Post</button>
-</form>
+<div class="form-group">
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="btn btn-success">Post</button>
+	</form>
+</div>
 
 {% endblock %}
