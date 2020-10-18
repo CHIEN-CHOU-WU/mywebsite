@@ -1,0 +1,13 @@
+appdirs==1.4.4
+distlib==0.3.1
+dj-database-url==0.5.0
+Django==2.1.5
+django-heroku==0.3.1
+filelock==3.0.12
+numpy==1.19.2
+psycopg2==2.8.6
+python-decouple==3.3
+pytz==2020.1
+six==1.15.0
+virtualenv==20.0.34
+whitenoise==5.2.0
